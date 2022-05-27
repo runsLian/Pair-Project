@@ -138,8 +138,12 @@ int main()
                   break;
             }
         }
-        printf("%d %c %d %c %d = %d\n", x, a, y, b, z, v);
-    }
+		printf("%d %c %d %c %d = %d\n", x, a, y, b, z, v);
+	 FILE * fp;
+
+   fp = fopen ("test.txt", "a+");
+        fprintf(fp,"%d %c %d %c %d =%d   \t\n",x,a,y,b,z,v);
+           fclose(fp);
+	}	
     printf("出题完成，感谢使用");
 }
-
